@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
 from app.task.routes import task_bp
-from app.models import Base, engine
+from app.models import Base, engine, Session
 
 def create_app():
     app = Flask(__name__)
