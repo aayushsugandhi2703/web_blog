@@ -2,7 +2,7 @@ from flask import Flask, Blueprint, render_template, url_for, redirect, request,
 from app.models import Task, Session
 from app.forms import TaskForm
 
-task_bp = Blueprint('task_bp', __name__, template_folder='templates')
+task_bp = Blueprint('task_bp', __name__, template_folder='/templates')
 
 @task_bp.route('/', methods=['GET'])
 def index():

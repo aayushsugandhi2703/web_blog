@@ -1,10 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine,table, Column, Integer, String, Text
-from sqlalchemy.orm import declerative_base, sessionmaker
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base 
+
 
 engine = create_engine('sqlite:///tasks_db.db', echo = True)
 
-Base = declerative_base()
+Base = declarative_base()
 
 class Task(Base):
     __tablename__ = 'tasks'
